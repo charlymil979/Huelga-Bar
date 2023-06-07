@@ -1,6 +1,5 @@
 let datos = {};
-const url =
-  "https://github.com/charlymil979/charlymil979.github.io/blob/master/JSON/huelgaDb.json";
+const url = "https://api.jsonbin.io/v3/b/6480e9ae9d312622a36bfd82";
 
 const $container = document.querySelector(".container");
 
@@ -12,10 +11,11 @@ let $seccion = "",
   art;
 
 function llamarDb(url) {
-  fetch(url)
+  fetch(url,{headers:{
+    "X-Access-Key":"$2b$10$7gOb6JjvkSTgwNMBYXHlVO7hXKJZHt4O4vc6RC.YQ7l3QAHg9y7LO"}})
     .then((resp) => resp.json())
-    .then((data) => {
-
+    .then((dato) => {
+      const data = dato.record.menu;
       // console.log(data);
 
       // Empezando a armar la estructura de datos
