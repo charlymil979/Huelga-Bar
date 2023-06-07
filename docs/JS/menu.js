@@ -15,7 +15,7 @@ function llamarDb(url) {
     "X-Access-Key":"$2b$10$7gOb6JjvkSTgwNMBYXHlVO7hXKJZHt4O4vc6RC.YQ7l3QAHg9y7LO"}})
     .then((resp) => resp.json())
     .then((dato) => {
-      const data = dato.record.menu;
+      const data = dato.record;
       // console.log(data);
 
       // Empezando a armar la estructura de datos
